@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    {% include "header.html" %}
+
+    <div class="content">
+
+        <!-- Tabs -->
+        <aside class="tabs">
+            <button>About</button>
+            <button>Projects</button>
+            <button>Skills</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Selected Tab Content</h2>
+            <p>Respective content against each tab will appear here.</p>
+        </main>
+
+        <!-- Feedback -->
+        <section class="feedback">
+            <h3>Suggestions / Feedback</h3>
+            <form action="/feedback" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="suggestion" placeholder="Your suggestion"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+    
+</div>
+
+</body>
+</html>
